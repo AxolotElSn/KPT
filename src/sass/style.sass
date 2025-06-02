@@ -2,16 +2,18 @@
     box-sizing: border-box
     margin: 0
     padding: 0
+    font-family: Arial, sans-serif
+
     
 header
     position: relative
-    min-height: 500px
-    background: url('../img/kovsh.png') center center/cover no-repeat
+    min-height: 700px
+    background: url('../img/background.jpg') center / 100% auto no-repeat
     padding-top: 50px
 
 .background-black
     width: 1300px
-    height: 500px
+    height: 100%
     background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 1) 100%)
     z-index: 1
     position: absolute
@@ -45,27 +47,120 @@ header
     margin-left: 40px
     font-size: 36px
 
-.promo-wrapper
+.title-wrapper
     position: absolute
     right: 60px
-    bottom: 60px
+    bottom: 160px
     text-align: center
     z-index: 1
 
-.promo
+.title-header
     font-size: 66px
     font-weight: 900
     color: #bad600
     span
         font-size: 120px
-    
 
-    
+.info-wrapper
+    padding-top: 10px
+    min-height: 300px
+    background-color: #bad700
+    background: linear-gradient(to right, rgba(186, 215, 0, 0) 0%, #bad700 50%, rgba(186, 215, 0, 0) 100%)
 
-        
+.info-title
+    text-align: center
+    font-size: 48px
+    font-weight: 900
+
+.info-text
+    text-align: center
+    font-size: 48px
+
+.technic
+    background-image: url("../img/bg.png")
+    background-size: cover
 
 
+.technic-wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 40px
+    max-width: 1400px
+    margin: 0 auto
 
+.technic-item
+    width: 30%
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    box-sizing: border-box
+    height: auto
+    justify-content: flex-start
 
+.technic-car
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
 
+    img
+        max-width: 100%
+        max-height: 320px
+        object-fit: contain
+        border-radius: 8px
 
+.technic-descr-overlay
+    margin-top: 12px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 10px
+    background: rgba(0, 0, 0, 0.7)
+    padding: 12px 16px
+    border-radius: 8px
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4)
+    user-select: none
+    color: #fff
+    font-weight: 900
+    font-size: 16px
+
+.icon-car
+    width: 50px
+    height: auto
+    object-fit: contain
+    user-select: none
+
+.icon-car img
+    width: 100%
+    height: auto
+    object-fit: contain
+
+.icon-descr-block
+    background: #222
+    color: #fff
+    font-weight: 900
+    padding: 8px 12px
+    border-radius: 6px
+    user-select: none
+    text-align: center
+    font-size: 16px
+    min-width: 140px
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5)
+
+    ul
+        margin: 6px 0 0
+        padding-left: 18px
+        list-style: disc inside
+        font-weight: 700
+        font-size: 14px
+        text-align: left
+
+/* Автокран SANY - описание в 2 строки по 3 блока */
+.technic-item.avtocran .technic-descr-overlay
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(2, auto)
+    gap: 10px 20px
+    justify-items: center
