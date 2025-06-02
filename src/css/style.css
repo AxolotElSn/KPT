@@ -95,24 +95,28 @@ header {
   align-items: center;
   text-align: center;
   box-sizing: border-box;
-  height: auto;
+  /* Фиксируем минимальную высоту с запасом под картинку и описание */
+  min-height: 580px;
   justify-content: flex-start; }
 
 .technic-car {
   width: 100%;
+  /* Сделать блочным контейнером с фиксированной высотой для картинок */
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center; }
   .technic-car img {
     max-width: 100%;
-    max-height: 320px;
+    max-height: 500px;
     object-fit: contain;
-    border-radius: 8px; }
+    border-radius: 8px;
+    display: block; }
 
 .technic-descr-overlay {
   margin-top: 12px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 10px;
   background: rgba(0, 0, 0, 0.7);
@@ -122,7 +126,8 @@ header {
   user-select: none;
   color: #fff;
   font-weight: 900;
-  font-size: 16px; }
+  font-size: 16px;
+  white-space: nowrap; }
 
 .icon-car {
   width: 50px;
@@ -160,6 +165,7 @@ header {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 10px 20px;
-  justify-items: center; }
+  justify-items: center;
+  white-space: normal; }
 
 /*# sourceMappingURL=style.css.map */
