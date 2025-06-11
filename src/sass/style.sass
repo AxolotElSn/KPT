@@ -4,15 +4,21 @@
     padding: 0
     font-family: Arial, sans-serif
 
+body
+    background-image: url("../img/bg.png")
+    background-size: cover
+    overflow-x: hidden
+
     
 header
     position: relative
-    min-height: 700px
+    height: 700px
     background: url('../img/background.jpg') center / 100% auto no-repeat
     padding-top: 50px
 
 .background-black
-    width: 1300px
+    width: 100%
+    max-width: 1300px
     height: 100%
     background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 1) 100%)
     z-index: 1
@@ -22,19 +28,23 @@ header
 
 .contact-wrapper
     position: absolute
-    padding: 10px 0 10px 200px
     right: 0
     background-color: #697e28
-    width: 780px
+    width: 100%
+    max-width: 780px
+    padding: 10px 60px 10px 80px
+    box-sizing: border-box
+    flex-wrap: wrap
     height: 100px
-    border-radius: 50px 0 0 50px
     opacity: 0.78
     font-size: 28px
     font-weight: bold
     display: flex
     flex-direction: row
     text-align: center
-    z-index: 2 
+    z-index: 2
+    clip-path: polygon(70px 0%, 100% 0%, 100% 100%, 0% 100%)
+
 
 .contact
     left: 0
@@ -76,9 +86,6 @@ header
     text-align: center
     font-size: 48px
 
-.technic
-    background-image: url("../img/bg.png")
-    background-size: cover
 
 .technic-wrapper
     display: flex
@@ -152,6 +159,7 @@ header
     font-size: 16px
     min-width: 140px
     box-shadow: 0 2px 6px rgba(0,0,0,0.5)
+    white-space: normal
 
     ul
         margin: 6px 0 0
@@ -168,5 +176,44 @@ header
     grid-template-rows: repeat(2, auto)
     gap: 10px 20px
     justify-items: center
-    white-space: normal  /* для многострочного описания */
+    white-space: normal  
+
+.custom-footer
+    background-color: #bad600 
+    color: black
+    padding: 40px 20px
+    text-align: center
+    margin-top: 60px
+
+    &__title
+        font-size: 60px
+        font-weight: 900
+        margin-bottom: 20px
+        letter-spacing: 2px
+
+    &__products
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        gap: 16px
+        font-size: 52px
+        font-weight: 700
+
+        span
+            display: inline-block
+            white-space: normal
+
+    &__hexagon
+        width: 20px
+        height: 20px
+        background-color: #4c4d4d
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)
+
+.line
+    background-color: #bad600
+    margin: 30px 0 40px 0
+    height: 30px
+    width: 100%
+
 
