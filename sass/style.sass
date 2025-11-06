@@ -403,7 +403,7 @@ header
 		&::before
 			content: "Вылет стрелы"
 			text-transform: uppercase
-			color: #333 // Темный текст
+			color: #333
 			font-weight: 900
 			font-size: 16px
 			text-align: center
@@ -412,13 +412,11 @@ header
 			width: 100%
 
 		.icon-descr-block
-			// Удаляем текст "Вылет стрелы" внутри блоков
 			&::before
 				content: ""
-			// Скрываем первую часть "Вылет стрелы" только визуально
+
 			font-size: 0
 
-			// Показываем только значение (25т — 42м)
 			&::after
 				content: attr(data-value)
 				font-size: 16px
@@ -438,6 +436,7 @@ header
 		font-weight: 900
 		margin-bottom: 40px
 		letter-spacing: 2px
+		animation: fadeIn 1s ease-in
 
 	&__products
 		display: flex
@@ -453,24 +452,42 @@ header
 		flex-direction: column
 		align-items: center
 		gap: 15px
+		transition: all 0.3s ease
+		
+		&:hover
+			transform: translateY(-5px)
+			
+			.footer-img
+				transform: scale(1.1)
+			
+			span
+				color: #4c4d4d
 
 	&__hexagon
-		width: 25px
-		height: 25px
+		width: 20px
+		height: 20px
 		background-color: #4c4d4d
 		clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)
+		transition: transform 0.3s ease
+		
+		&:hover
+			transform: rotate(180deg)
 
 .footer-img
 	width: 80px
 	height: 80px
 	object-fit: cover
 	border-radius: 8px
+	transition: all 0.3s ease
+	filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2))
 
-.line
-	background-color: #bad600
-	margin: 30px 0 40px 0
-	height: 30px
-	width: 100%
+@keyframes fadeIn
+	0%
+		opacity: 0
+		transform: translateY(20px)
+	100%
+		opacity: 1
+		transform: translateY(0)
 
 @media (max-width: 1440px)
 	.custom-footer__products
